@@ -76,17 +76,7 @@ class BSTNode:
             # Recursive case: make the problem smaller to get to the base case
             # Go right
             return self.right.get_max()
-        # iterate get_max():
-        # start at the root (self)
-        cur_node = self
-        # keep going right until you can't anymore
-        # --> stop when cur_node.right is None
-        while cur_node.right is not None:
-            # move closer to the "base case"
-            cur_node = cur_node.right
-        # return
-        # "base case"
-        return cur_node.value
+
 
     # Call the function `fn` on the value of each node
     def for_each(self, fn):
